@@ -2,7 +2,7 @@ import 'package:coffee_strike/controllers/category_controller.dart';
 import 'package:coffee_strike/models/card_item.dart';
 import 'package:coffee_strike/models/category.dart';
 import 'package:coffee_strike/models/result.dart';
-import 'package:coffee_strike/pages/common/app_bar.dart';
+import 'package:coffee_strike/pages/category/category_add_page.dart';
 import 'package:coffee_strike/pages/common/card_widget.dart';
 import 'package:coffee_strike/pages/drink/drink_list_page.dart';
 import 'package:flutter/material.dart';
@@ -35,13 +35,14 @@ class _CategoryListPageState extends StateMVC {
         centerTitle: true,
         backgroundColor: Colors.black12,
       ),
-      body: _buildContent()
+      body: _buildContent(),
+      floatingActionButton: _buildActionButton()
     );
   }
 
   Widget _buildContent() {
     final state = _controller.currentState;
-    if (state is ResultLoading) {
+    if (state == null || state is ResultLoading) {
       return const Center(
         child: CircularProgressIndicator(),
       );
@@ -65,6 +66,24 @@ class _CategoryListPageState extends StateMVC {
         )
       );
     }
+  }
+
+  Widget? _buildActionButton() {
+    return FloatingActionButton(
+      backgroundColor: Colors.black,
+      child: Icon(Icons.add),
+      onPressed: () {
+        Navigator.push(context, MaterialPageRoute(
+            builder: (context) => CategoryAddPage()
+        )).then((value) {
+          if (value is ResultSuccess) {
+            ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(content: Text("Категория успешно создана"))
+            );
+          }
+        });
+      },
+    );
   }
 
 }

@@ -27,10 +27,6 @@ class _HomePageState extends StateMVC {
     _con = HomeController.controller;
   }
 
-
-  // здесь почти ничего не изменилось
-  // только currentTab и selectTab теперь
-  // являются частью нашего контроллера
   @override
   Widget build(BuildContext context) {
     // WillPopScope переопределяет поведения

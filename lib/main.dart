@@ -13,6 +13,8 @@ void main() => runApp(MyApp());
 // и не имеют состояния
 class MyApp extends StatelessWidget {
 
+
+
   // функция build отвечает за построение иерархии виджетов
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,6 @@
 import 'package:coffee_strike/pages/category/category_list_page.dart';
+import 'package:coffee_strike/pages/profile/login_page.dart';
 import 'package:flutter/material.dart';
-import '../todo/todo_list_page.dart';
 import '../../models/tab.dart';
 
 class TabNavigator extends StatelessWidget {
@@ -32,13 +32,11 @@ class TabNavigator extends StatelessWidget {
       // Navigator может сам построить наши страницы или
       // мы можем переопределить метод onGenerateRoute
       onGenerateRoute: (routeSettings) {
-        // сначала определяем текущую страницу
         Widget currentPage;
         if (tabItem == TabItem.CATEGORY) {
-          // пока мы будем использовать PonyListPage
           currentPage = CategoryListPage();
         } else {
-          currentPage = TodoListPage();
+          currentPage = LoginPage();
         }
         // строим Route (страница или экран)
         return MaterialPageRoute(builder: (context) => currentPage,);

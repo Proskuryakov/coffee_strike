@@ -5,7 +5,7 @@ import 'package:mvc_pattern/mvc_pattern.dart';
 import '../models/result.dart';
 
 class DrinkController extends ControllerMVC {
-  final Repository repository = Repository();
+  final Repository repository = Repository.getInstance();
 
   Result currentState = ResultLoading();
 
