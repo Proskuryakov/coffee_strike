@@ -1,16 +1,7 @@
-# coffee_strike
+# CoffeeStrike flutter
 
-Mobile app for CoffeStrike project
+Выполнил: Проскуряков Егор
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Ссылки:
+- [Figma](https://www.figma.com/file/cFSnx7V0oG5qkNRH3unLmp/CoffeStrike?node-id=0%3A1&t=mDQ9xEmKZu2CC9bN-1)
+- [APK-file](https://drive.google.com/file/d/15714fuPvoGvetbAbujBKjMFakCzmHaba/view?usp=share_link)
